@@ -1,0 +1,34 @@
+//Java GPA calculator app
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+
+
+        String[] CourseName = new String[courseCount];
+        double[] GPA = new double[courseCount];
+        double avg = 0;
+        int index;
+        int courseCount
+        Scanner input = new Scanner(System.in);
+        // Get the count of courses from the user
+        System.out.println("Enter the count of courses: ");
+        courseCount = input.nextInt();
+        for (index = 0; index < courseCount; index++) {
+            System.out.println("Enter the name of course " + (index + 1) + ": ");
+            CourseName[index] = input.next();
+            System.out.println("Enter the GPA of course " + (index + 1) + ": ");
+            GPA[index] = input.nextDouble();
+        }
+        avg = Arrays.stream(GPA).sum() / courseCount;
+        System.out.println("Average GPA of all courses: " + avg);
+        System.out.println(courseCount+" Courses and their GPA's are calculated");
+        for (index = 0; index < courseCount; index++) {
+            System.out.print("Course " + (index + 1) + " "+CourseName[index] + ": ");
+            System.out.println(GPA[index]);
+        }
+       
+
+    }
+}
