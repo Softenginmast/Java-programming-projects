@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class Main{
+    public static void main(String[] args){
+        double numbers,factorial = 1;
+        int i;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        numbers = input.nextInt();
+        for (i=1;i<numbers;i++){
+            factorial=factorial*i;
+        }
+        System.out.println("Factorials of "+numbers+" equals to: "+factorial);
+    }
+}
