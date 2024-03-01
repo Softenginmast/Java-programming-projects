@@ -1,0 +1,40 @@
+import java.util.Scanner;
+class calculator{
+    public static void main(String[] args){
+        int a ,b,c;
+        String[] process={"+","-","*","/"};
+        String processor;
+        Scanner input=new Scanner(System.in);
+        System.out.println("Please Select your process from menu and type it in process selector:");
+        System.out.println("Process are: + , - , * , /\n"+"for sum [+]\n"+"for sum [+]\n"+"for sum [+]\n"+"for sum [+]\n");
+        System.out.println("Process Selector:");
+        processor=input.nextLine();
+        System.out.println("Enter number 1:");
+        a=input.nextInt();
+        System.out.println("Enter number 2:");
+        b=input.nextInt();
+        switch (processor) {
+            case "+":
+                c=a+b;
+                System.out.println("The sum of your numbers is equal to: " + c);
+                break;
+            case "-":
+                c=a-b;
+                System.out.println("The minus of your numbers is equal to: " + c);
+                break;
+            case "*":
+                c=a*b;
+                System.out.println("The multiplications of your numbers is equal to: " + c);
+                break;
+            case "/":
+                if (b !=0) {
+                    c=a/b;
+                    System.out.println("The divided of your numbers is equal to: " + c);
+                }
+                else {
+                    System.out.println("Error: Division by zero is not allowed.");
+                }
+                break;
+        }
+    }
+}
